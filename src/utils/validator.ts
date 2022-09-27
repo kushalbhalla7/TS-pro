@@ -1,29 +1,38 @@
 import { ErrorResponse } from '@exceptions/error-response';
 import { NextFunction, Request, Response } from 'express';
+import { Logger } from './logger';
+import LogConfig from 'src/interfaces/log-config-interface';
 
 export class RequestValidator {
   static joiValidation(
     req: Request,
     res: Response,
     next: NextFunction,
-    joiSchemaForSwagegr: any
+    joinSchemaForSwagger: any,
+    logConfig: LogConfig
   ) {
+    const logger: Logger = new Logger(
+      logConfig.moduleName,
+      logConfig.errorFilePath,
+      logConfig.activityFilePath
+    );
+
     try {
       if (
-        joiSchemaForSwagegr.query &&
-        Object.keys(joiSchemaForSwagegr).length > 0
+        joinSchemaForSwagger.query &&
+        Object.keys(joinSchemaForSwagger).length > 0
       ) {
-        const response = joiSchemaForSwagegr.query.validate(req.query);
+        const response = joinSchemaForSwagger.query.validate(req.query);
         if (response && response.error) {
           throw response.error;
         }
       }
 
       if (
-        joiSchemaForSwagegr.body &&
-        Object.keys(joiSchemaForSwagegr).length > 0
+        joinSchemaForSwagger.body &&
+        Object.keys(joinSchemaForSwagger).length > 0
       ) {
-        const response = joiSchemaForSwagegr.body.validate(req.body);
+        const response = joinSchemaForSwagger.body.validate(req.body);
         if (response && response.error) {
           throw response.error;
         }
@@ -32,6 +41,7 @@ export class RequestValidator {
     } catch (err: any) {
       const error: any = { ...new ErrorResponse().RequestValidationError };
       error.message = err.message;
+      logger.error(JSON.stringify(error));
       res.status(400).json(error);
     }
   }

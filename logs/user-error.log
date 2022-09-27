@@ -6,3 +6,4 @@
 {"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:07:04.925Z"}
 {"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:09:56.425Z"}
 {"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:10:54.682Z"}
+{"level":"error","message":"{\"httpStatusCode\":400,\"message\":\"\\\"email\\\" must be a valid email\",\"serverCode\":\"PRO_ERR_112\"}","timestamp":"2022-09-27T13:00:03.033Z"}

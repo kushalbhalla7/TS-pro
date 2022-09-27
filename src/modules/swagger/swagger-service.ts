@@ -47,7 +47,6 @@ export class Swagger {
         };
       }
     }
-
     const toSwagger = j2s(joiDefinitions).swagger;
     if (toSwagger && toSwagger.properties && toSwagger.properties.body) {
       this.definitions = {
@@ -166,7 +165,6 @@ export class Swagger {
       });
     }
 
-    console.log(transformPath);
     if (this.paths && this.paths[transformPath]) {
       this.paths[transformPath] = {
         ...this.paths[transformPath],
