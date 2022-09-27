@@ -1,0 +1,8 @@
+{"level":"error","message":"{\"message\":\"User already exists with this email\",\"serverCode\":\"PRO_ERR_101\",\"httpStatusCode\":409}","timestamp":"2022-09-27T07:15:22.553Z"}
+{"level":"error","message":"{\"message\":\"User already exists with this email\",\"serverCode\":\"PRO_ERR_101\",\"httpStatusCode\":409}","timestamp":"2022-09-27T11:02:54.377Z"}
+{"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:03:11.649Z"}
+{"level":"error","message":"{\"message\":\"User already exists with this email\",\"serverCode\":\"PRO_ERR_101\",\"httpStatusCode\":409}","timestamp":"2022-09-27T11:04:50.368Z"}
+{"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:05:04.691Z"}
+{"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:07:04.925Z"}
+{"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:09:56.424Z"}
+{"level":"error","message":"{\"index\":0,\"code\":11000,\"keyPattern\":{\"username\":1},\"keyValue\":{\"username\":null}}","timestamp":"2022-09-27T11:10:54.682Z"}
